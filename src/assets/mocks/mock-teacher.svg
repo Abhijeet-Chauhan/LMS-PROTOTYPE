@@ -1,0 +1,10 @@
+<svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="120" rx="8" fill="#2E2E2E"/>
+<rect x="15" y="15" width="170" height="15" rx="4" fill="#4A4A4A"/>
+<text x="20" y="26" font-family="Arial, sans-serif" font-size="8" fill="#BDBDBD">Student Progress</text>
+<rect x="30" y="45" width="20" height="50" rx="3" fill="#8884d8"/>
+<rect x="60" y="55" width="20" height="40" rx="3" fill="#82ca9d"/>
+<rect x="90" y="35" width="20" height="60" rx="3" fill="#ffc658"/>
+<rect x="120" y="65" width="20" height="30" rx="3" fill="#ff8042"/>
+<rect x="150" y="50" width="20" height="45" rx="3" fill="#f48fb1"/>
+</svg>
