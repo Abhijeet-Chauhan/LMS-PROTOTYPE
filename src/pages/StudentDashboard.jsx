@@ -8,6 +8,7 @@ import { mockData } from '../data/mockData';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import AuroraBackground from '../components/AuroraBackground'; 
 
 const PlaceholderView = ({ title }) => (
     <Box>
@@ -67,7 +68,8 @@ export default function StudentDashboard() {
     };
 
     return (
-        <Box sx={{ display: 'flex', bgcolor: 'background.default', minHeight: '100vh' }}>
+        <AuroraBackground> {
+        <Box sx={{ display: 'flex', bgcolor: 'transparent', minHeight: '100vh' }}>
             <DashboardSidebar 
                 activeView={activeView} 
                 setActiveView={setActiveView}
@@ -91,5 +93,7 @@ export default function StudentDashboard() {
                 </Container>
             </Box>
         </Box>
+        }
+            </AuroraBackground>
     );
 }

@@ -6,6 +6,7 @@ import { StudentPerformanceTable, ScoreTrendChart, StrugglingTopicsChart, Engage
 import CrisisAlertIcon from '@mui/icons-material/CrisisAlert';
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import GradingIcon from '@mui/icons-material/Grading';
+import AuroraBackground from '../components/AuroraBackground'; 
 
 const MainDashboardView = () => (
     <Grid container spacing={3}>
@@ -82,7 +83,8 @@ export default function TeacherDashboard() {
     };
 
     return (
-        <Box sx={{ display: 'flex', bgcolor: 'background.default', minHeight: '100vh' }}>
+        <AuroraBackground> {
+        <Box sx={{ display: 'flex', bgcolor: 'transparent', minHeight: '100vh' }}>
             <DashboardSidebar 
                 activeView={activeView} 
                 setActiveView={setActiveView}
@@ -104,5 +106,7 @@ export default function TeacherDashboard() {
                 </Container>
             </Box>
         </Box>
+    }
+    </AuroraBackground>
     );
 }

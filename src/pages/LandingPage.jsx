@@ -11,6 +11,8 @@ import BarChartIcon from '@mui/icons-material/BarChart';
 import FamilyRestroomIcon from '@mui/icons-material/FamilyRestroom';
 import SchoolIcon from '@mui/icons-material/School';
 
+import AuroraBackground from '../components/AuroraBackground';
+
 const floatAnimation = `@keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }`;
 
 const DraggableFloatingIcon = ({ icon, color, sx, duration = '6s', delay = '0s' }) => {
@@ -41,6 +43,7 @@ const DraggableFloatingIcon = ({ icon, color, sx, duration = '6s', delay = '0s' 
 
 export default function LandingPage() {
   return (
+    <AuroraBackground> {
     <Box sx={{ width: '100%', overflowX: 'hidden', position: 'relative' }}>
       <GlobalStyles styles={floatAnimation} />
       <Header />
@@ -72,5 +75,7 @@ export default function LandingPage() {
       {/* THE FOOTER IS ADDED HERE */}
       <Footer />
     </Box>
+}
+    </AuroraBackground>
   );
 }

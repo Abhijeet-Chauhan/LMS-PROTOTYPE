@@ -5,10 +5,21 @@ import { CssBaseline, GlobalStyles } from '@mui/material';
 import { ThemeContextProvider } from './context/ThemeContext.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 
+const auroraKeyframes = `
+  @keyframes aurora {
+    from {
+      background-position: 50% 50%, 50% 50%;
+    }
+    to {
+      background-position: 350% 50%, 350% 50%;
+    }
+  }
+`;
 
 const globalStyles = (
     <GlobalStyles
       styles={(theme) => ({
+        ...(auroraKeyframes),
         // This enables smooth scrolling on the whole page
         'html': {
           scrollBehavior: 'smooth',

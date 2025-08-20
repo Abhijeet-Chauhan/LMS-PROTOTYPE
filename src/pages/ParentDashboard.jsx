@@ -3,6 +3,7 @@ import { Box, Container, Grid, Typography, Stack } from '@mui/material';
 import DashboardSidebar from '../components/DashboardSidebar';
 import { AiDigestWidget, MasteryMapWidget, WellbeingChart, ParentActionsWidget } from '../components/ParentDashboardComponents';
 import { MessagesView } from '../components/TeacherDashboardComponents'; // Reuse messages view
+import AuroraBackground from '../components/AuroraBackground'; 
 
 const PlaceholderView = ({ title }) => (
     <Box>
@@ -53,7 +54,8 @@ export default function ParentDashboard() {
     };
 
     return (
-        <Box sx={{ display: 'flex', bgcolor: 'background.default', minHeight: '100vh' }}>
+        <AuroraBackground> {
+        <Box sx={{ display: 'flex', bgcolor: 'transparent', minHeight: '100vh' }}>
             <DashboardSidebar 
                 activeView={activeView} 
                 setActiveView={setActiveView}
@@ -70,5 +72,7 @@ export default function ParentDashboard() {
                 </Container>
             </Box>
         </Box>
+        }
+            </AuroraBackground>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Button, Card, CardContent, CardHeader, Container, Grid, List, ListItem, ListItemIcon, ListItemText, Typography, useTheme } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { motion } from 'framer-motion';
-
+import AuroraBackground from '../components/AuroraBackground'; 
 const tiers = [
   { title: 'Basic', price: '12', description: ['Up to 5 classrooms', 'Core AI Tutor', 'Basic Analytics'], buttonText: 'Get Started', buttonVariant: 'outlined' },
   { title: 'Pro', price: '25', description: ['Unlimited classrooms', 'Advanced AI Tutor', 'Predictive Analytics', 'Parent Portal'], buttonText: 'Choose Pro', buttonVariant: 'contained' },
@@ -15,7 +15,8 @@ const MotionGrid = motion(Grid);
 export default function PricingSection() {
     const theme = useTheme();
   return (
-    <Box id="pricing" sx={{ py: 12, bgcolor: 'background.paper' }}>
+    <AuroraBackground> {
+    <Box id="pricing" sx={{ py: 12, bgcolor: 'transparent' }}>
       <Container maxWidth="md">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <Typography variant="h3" fontWeight={700} textAlign="center" gutterBottom>
@@ -67,5 +68,7 @@ export default function PricingSection() {
         </Grid>
       </Container>
     </Box>
+    }
+    </AuroraBackground>
   );
 }

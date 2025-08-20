@@ -8,7 +8,7 @@ export const ThemeContext = createContext({
 
 export const ThemeContextProvider = ({ children }) => {
   // THE FIX IS HERE: The initial state is now 'light' instead of 'dark'.
-  const [mode, setMode] = useState('light');
+  const [mode, setMode] = useState('dark');
 
   const colorMode = useMemo(
     () => ({
